@@ -23,4 +23,6 @@ public class GameManager : MonoBehaviour
     //게임 내에서 씬이동시 유지하고 픈 골드 값(변수)
     public int MaxScore = 0;
     public int GameScore = 0;
+
+    public string PlayerName = "";
 }

@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1397
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Project
   m_RootView: {fileID: 4}
   m_MinSize: {x: 875, y: 492}
   m_MaxSize: {x: 10000, y: 10000}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 70
+  controlID: 50
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -399,9 +399,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 0a0c0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 6459ffffb059ffffc65affffce5affffd85affffe65afffffc5affff0a5bffff245bffff7860ffffe462ffff3863ffffce65ffff1a66ffff2c67ffff3067ffff3667ffff3e67ffff4e67ffff5667ffff6c67ffffa06ffffff06fffff047dffff547dfffff67effff487fffff987fffffea7fffff4680ffff9680ffff2c83ffff7883ffff9284ffff9e84ffffac84ffffbe84ffffd884ffffea84ffff0885ffffa285ffffa486fffff286ffff4287ffff5688ffffc289ffff148affff648affffba8affffea8cffffe88effff468fffffc68fffffae92fffffa92ffff3094ffff3c94ffff4a94ffff5c94ffff7694ffff8894ffffa694ffff6eb6ffff48b7ffff74ccffff9ecdffffa6cefffff6ceffff48cfffffbacfffff3ad2ffff8ad2ffffd8d2ffff28d3ffff7ad3ffffcad3ffff18d4ffff68d4ffffbad4ffff0ad5ffff28dbffff7edcffff6edeffff60e2ffffe6e3ffff4ae4ffff98e4ffffece4ffff3ce5ffff84eaffffd2eaffff94ecffff7af9ffffcaf9ffff1afbffffe25800003e5900007a5d0000965d0000b65d0000c05d00001e600000f2660000be6a0000ce6a0000e66a00003a6c00004a6c0000626c0000f86f0000367f0000108100002881000066820000b6880000868a00002c8c0000b2980000ca9800006c9a00009e9a0000809d0000b89d000070a50000c6a50000f8a700004ca80000
+      m_ExpandedIDs: b4eaffffd0ebffff44f9ffff94f9ffff1afbffff705500009a5e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -517,7 +517,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -525,30 +525,30 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\unityworks\IPD_Game_Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 8e570000
-    m_LastClickedID: 22414
-    m_ExpandedIDs: 00000000ce55000000ca9a3b
+    m_SelectedIDs: c0560000
+    m_LastClickedID: 22208
+    m_ExpandedIDs: 00000000c056000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Resources
-      m_OriginalName: Resources
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 22412
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
@@ -562,7 +562,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ce550000d0550000
+    m_ExpandedIDs: 00000000c0560000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1100,7 +1100,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: 957.3216, y: 2516.4048, z: -2.4564934}
     speed: 2
-    m_Value: {x: 986.7189, y: 2521.4207, z: -2.289987}
+    m_Value: {x: 957.3216, y: 2516.4048, z: -2.4564934}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1152,7 +1152,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 386.6663
     speed: 2
-    m_Value: 370.0156
+    m_Value: 386.6663
   m_Ortho:
     m_Target: 1
     speed: 2
