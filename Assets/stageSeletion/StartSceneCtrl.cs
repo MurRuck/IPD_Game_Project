@@ -22,8 +22,8 @@ public class StartSceneCtrl : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-    public void Setting()
+    public void CollectionScene()
     {
-        SettingGame.SetActive(true);
+        SceneManager.LoadScene(4);
     }
 }

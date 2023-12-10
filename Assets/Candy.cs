@@ -53,14 +53,12 @@ public class Candy : MonoBehaviour
     {
         if (selected == this)
         {
-            Debug.Log("A");
             selected = null;
             UnSelect();
             return;
         }
         if (selected != null)
         {
-            Debug.Log("B");
             selected.UnSelect();
             Debug.Log(Vector3.Distance(selected.transform.position, transform.position));
             if (Vector3.Distance(selected.transform.position, transform.position) <= 0.83f)
