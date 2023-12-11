@@ -25,4 +25,5 @@ public class GameManager : MonoBehaviour
     public int GameScore = 0;
 
     public string PlayerName = "";
+    public bool GoCollection = false;
 }

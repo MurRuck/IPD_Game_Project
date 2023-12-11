@@ -30,6 +30,7 @@ public class Timer : MonoBehaviour
     void Start()
     {
 
+        System.GC.Collect();
     }
 
 

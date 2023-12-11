@@ -10,6 +10,7 @@ public class RankinSceneUICtrl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        System.GC.Collect();
         text.text = GameObject.Find("SingleTon").gameObject.GetComponent<GameManager>().PlayerName + " " + GameObject.Find("SingleTon").gameObject.GetComponent<GameManager>().GameScore + "점";
     }
 

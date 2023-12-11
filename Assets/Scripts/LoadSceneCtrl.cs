@@ -10,13 +10,20 @@ public class LoadSceneCtrl : MonoBehaviour
     float gauge;
 
     public GameObject TimeScoll;
+
+    public GameManager manager;
     // Start is called before the first frame update
     void Start()
     {
+        System.GC.Collect();
+        manager = GameObject.Find("SingleTon").GetComponent<GameManager>();
         time = Random.Range(3, 8);
         gauge = 1 / time;
         Invoke("SceneChange", time + 0.3f);
         time = 0;
+
+        if (manager.GoCollection)
+            SceneManager.LoadScene(4);
     }
 
     // Update is called once per frame
