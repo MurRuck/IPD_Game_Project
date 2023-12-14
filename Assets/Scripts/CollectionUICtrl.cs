@@ -29,7 +29,7 @@ public class CollectionUICtrl : MonoBehaviour
     }
     public void Cancle()
     {
-        SceneManager.LoadScene(0);
+        StartCoroutine(LoadMyAsyncScene("MainScene"));
     }
 
     public void InforButton(int i)
@@ -44,5 +44,15 @@ public class CollectionUICtrl : MonoBehaviour
     public void OffInfor()
     {
         InforGame.SetActive(false);
+    }
+
+    IEnumerator LoadMyAsyncScene(string SceneName)
+    {
+        AsyncOperation async = SceneManager.LoadSceneAsync(SceneName);
+
+        while (!async.isDone)
+        {
+            yield return null;
+        }
     }
 }

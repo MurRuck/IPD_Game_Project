@@ -50,10 +50,6 @@ public class ScoreUICtrl : MonoBehaviour
         NewGame.SetActive(true);
     }
 
-    public void Coll()
-    {
-        SceneManager.LoadScene(4);
-    }
 
     void Star()
     {
@@ -70,12 +66,21 @@ public class ScoreUICtrl : MonoBehaviour
 
     public void Cancle()
     {
-        SceneManager.LoadScene(0);
+        StartCoroutine(LoadMyAsyncScene("MainScene"));
     }
 
     public void ConTinue()
     {
-        SceneManager.LoadScene(1);
+        StartCoroutine(LoadMyAsyncScene("LoadingScene"));
     }
 
+    IEnumerator LoadMyAsyncScene(string SceneName)
+    {
+        AsyncOperation async = SceneManager.LoadSceneAsync(SceneName);
+
+        while (!async.isDone)
+        {
+            yield return null;
+        }
+    }
 }

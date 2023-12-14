@@ -51,6 +51,11 @@ public class StartSceneCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            text.text = "aaa";
+            EnterName();
+        }
         BlankCheck();
 
         if (text.isFocused)
@@ -69,22 +74,6 @@ public class StartSceneCtrl : MonoBehaviour
         if (EnterYourName.activeSelf && keyboard != null)
             text.text = keyboard.text;
 
-    }
-
-    public void GameStart()
-    {
-        manager.GoCollection = false;
-        SceneManager.LoadScene(1);
-    }
-
-    public void CollectionScene()
-    {
-        manager.GoCollection = true;
-        SceneManager.LoadScene(1);
-    }
-    public void RankingScene()
-    {
-        SceneManager.LoadScene(5);
     }
 
     public void TouchScreen()
@@ -117,5 +106,26 @@ public class StartSceneCtrl : MonoBehaviour
         }
 
     }
+    public void GameStart()
+    {
+        StartCoroutine(LoadMyAsyncScene("LoadingScene"));
+    }
 
+    public void CollectionScene()
+    {
+        StartCoroutine(LoadMyAsyncScene("CollectionScene"));
+    }
+    public void RankingScene()
+    {
+        StartCoroutine(LoadMyAsyncScene("Rank"));
+    }
+    IEnumerator LoadMyAsyncScene(string SceneName)
+    {
+        AsyncOperation async = SceneManager.LoadSceneAsync(SceneName);
+
+        while (!async.isDone)
+        {
+            yield return null;
+        }
+    }
 }

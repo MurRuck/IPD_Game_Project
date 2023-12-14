@@ -10,7 +10,7 @@ public class BG : MonoBehaviour
     Vector3 clickStartpos;
     Vector3 startPos;
 
-    float bounce_margin = 15f; // 스크롤 금지 구역
+    float bounce_margin = 15f;
 
     Vector3 bgSize;
 
@@ -21,8 +21,6 @@ public class BG : MonoBehaviour
         bgSize = GetComponent<Renderer>().bounds.size;
     }
 
-    //TODO: 바운스 백 로직
-    // TODO: 경계에서만 바운스 백 하도록.
 
     bool isGrabbed = false;
 

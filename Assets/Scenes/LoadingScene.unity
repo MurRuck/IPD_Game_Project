@@ -589,6 +589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeScoll: {fileID: 1215088815}
+  manager: {fileID: 0}
 --- !u!1 &713155589
 GameObject:
   m_ObjectHideFlags: 0

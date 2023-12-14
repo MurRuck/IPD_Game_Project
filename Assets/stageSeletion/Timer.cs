@@ -89,13 +89,13 @@ public class Timer : MonoBehaviour
 
     void ChangeScene()
     {
-        SceneManager.LoadScene(3);
+        StartCoroutine(LoadMyAsyncScene("Score"));
     }
 
 
     public void Exit()
     {
-        SceneManager.LoadScene(0);
+        StartCoroutine(LoadMyAsyncScene("MainScene"));
     }
 
     public void ToggleButton(int a)
@@ -112,8 +112,18 @@ public class Timer : MonoBehaviour
          
 
     }
-    public void Restart()
+   //public void Restart()
+   //{
+   //    StartCoroutine(LoadMyAsyncScene());
+   //}
+
+    IEnumerator LoadMyAsyncScene(string SceneName)
     {
-        SceneManager.LoadScene(1);
+        AsyncOperation async = SceneManager.LoadSceneAsync("Score");
+
+        while (!async.isDone)
+        {
+            yield return null;
+        }
     }
 }

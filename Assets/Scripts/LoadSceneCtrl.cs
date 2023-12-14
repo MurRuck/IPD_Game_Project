@@ -12,7 +12,8 @@ public class LoadSceneCtrl : MonoBehaviour
     public GameObject TimeScoll;
 
     public GameManager manager;
-    // Start is called before the first frame update
+    // Start is called before the first frame update'
+
     void Start()
     {
         System.GC.Collect();
@@ -22,8 +23,6 @@ public class LoadSceneCtrl : MonoBehaviour
         Invoke("SceneChange", time + 0.3f);
         time = 0;
 
-        if (manager.GoCollection)
-            SceneManager.LoadScene(4);
     }
 
     // Update is called once per frame
@@ -36,6 +35,16 @@ public class LoadSceneCtrl : MonoBehaviour
 
     void SceneChange()
     {
-        SceneManager.LoadScene(2);
+        StartCoroutine(LoadMyAsyncScene());
+    }
+
+    IEnumerator LoadMyAsyncScene()
+    {
+        AsyncOperation async = SceneManager.LoadSceneAsync("GameScene");
+
+        while(!async.isDone)
+        {
+            yield return null;
+        }
     }
 }

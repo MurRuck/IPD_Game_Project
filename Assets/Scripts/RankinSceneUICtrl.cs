@@ -22,6 +22,17 @@ public class RankinSceneUICtrl : MonoBehaviour
 
     public void Exit()
     {
-        SceneManager.LoadScene(0);
+        StartCoroutine(LoadMyAsyncScene());
+    }
+
+
+    IEnumerator LoadMyAsyncScene()
+    {
+        AsyncOperation async = SceneManager.LoadSceneAsync("MainScene");
+
+        while (!async.isDone)
+        {
+            yield return null;
+        }
     }
 }
