@@ -26,10 +26,12 @@ public class Timer : MonoBehaviour
     public GameObject Trash;
 
     public GameObject TimeOverGame;
+
+    public GameManager manager;
     // Start is called before the first frame update
     void Start()
     {
-
+        manager = GameObject.Find("SingleTon").GetComponent<GameManager>();
         System.GC.Collect();
     }
 
@@ -101,6 +103,9 @@ public class Timer : MonoBehaviour
     public void ToggleButton(int a)
     {
         ToggleButtonGame[a].GetComponent<Animator>().SetBool("Reverse", !ToggleButtonGame[a].GetComponent<Animator>().GetBool("Reverse"));
+
+        
+        if(a == 0)
         
     }
     public void Setting()

@@ -23,6 +23,8 @@ public class Candy : MonoBehaviour
 
     bool touchBlock = false;
 
+    public AudioSource bgm;
+
     void Start()
     {
         spriteIndex = Random.Range(0, sprites.Count);
@@ -121,6 +123,7 @@ public class Candy : MonoBehaviour
         if (matched.Count == 0)
         {
             SwapAndCheckMatch(swap_a, swap_b, true); // 복귀
+            bgm.Play();
         }
         else
         {

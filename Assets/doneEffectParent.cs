@@ -12,6 +12,8 @@ public class doneEffectParent : MonoBehaviour
     void Start()
     {
 
+        if (transform.GetComponentInParent<TimeCheck>().time <= 30)
+            GetComponent<AudioSource>().Play();
     }
 
 

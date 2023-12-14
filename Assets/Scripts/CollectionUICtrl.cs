@@ -21,7 +21,7 @@ public class CollectionUICtrl : MonoBehaviour
         ScoreGame = GameObject.Find("SingleTon").GetComponent<GameManager>();
 
 
-        for(int i = 0; i < ScoreGame.MaxScore / 5000; i++)
+        for(int i = 0; i < ScoreGame.MaxScore / 10000; i++)
         {
             CollectionGame[i].GetComponent<Image>().sprite = UnLockSprite[i];
             UnlockBool[i] = true;

@@ -19,9 +19,17 @@ public class StartSceneCtrl : MonoBehaviour
 
     public GameManager manager;
 
+    public AudioSource PlayMusic;
+
+    public AudioClip[] BGMList;
+
     // Start is called before the first frame update
     void Start()
     {
+        PlayMusic = GetComponent<AudioSource>();
+
+        if(manager.BGMBool)
+            PlayMusic.Play();
         System.GC.Collect();
         manager = GameObject.Find("SingleTon").GetComponent<GameManager>();
         if (manager.PlayerName != "")
@@ -106,17 +114,29 @@ public class StartSceneCtrl : MonoBehaviour
         }
 
     }
+
+    public void OnSound()
+    {
+        if (manager.EFFBool)
+        {
+            PlayMusic.clip = BGMList[0];
+            PlayMusic.Play();
+        }
+    }
     public void GameStart()
     {
+        OnSound();
         StartCoroutine(LoadMyAsyncScene("LoadingScene"));
     }
 
     public void CollectionScene()
     {
+        OnSound();
         StartCoroutine(LoadMyAsyncScene("CollectionScene"));
     }
     public void RankingScene()
     {
+        OnSound();
         StartCoroutine(LoadMyAsyncScene("Rank"));
     }
     IEnumerator LoadMyAsyncScene(string SceneName)
