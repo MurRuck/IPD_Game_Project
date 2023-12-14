@@ -105,7 +105,6 @@ public class Timer : MonoBehaviour
         ToggleButtonGame[a].GetComponent<Animator>().SetBool("Reverse", !ToggleButtonGame[a].GetComponent<Animator>().GetBool("Reverse"));
 
         
-        if(a == 0)
         
     }
     public void Setting()
